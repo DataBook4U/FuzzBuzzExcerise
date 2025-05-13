@@ -1,11 +1,11 @@
 #FuzzBuzz Exercise:
 
 for i in range(0, 100):
-    if i % 3 == 0:
-        print("Fuzz")
+    if i % 3 == 0 and  i % 5 == 0:
+        print("FuzzBuzz")
     elif i % 5 == 0:
         print("Buzz")
-    elif i % 3 == 0 & i % 5 == 0:
-        print("FuzzBuzz")
+    elif i % 3 == 0:
+        print("Fuzz")
     else:
         print(i)
