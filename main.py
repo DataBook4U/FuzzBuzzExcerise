@@ -1,3 +1,20 @@
+#Desktop Application:
+import sys
+from PyQt6 import QtWidgets
+from ui.mainwindow import Ui_MainWindow
+
+app = QtWidgets.QApplication(sys.argv)
+
+window = QtWidgets.QMainWindow()
+window.setWindowTitle("FuzzBuzzAufgabe")
+
+ui_window = Ui_MainWindow()
+ui_window.setupUi(window)
+
+
+window.show()
+
+
 #FuzzBuzz Exercise:
 
 class Zahlenspiel:
@@ -18,3 +35,8 @@ class Zahlenspiel:
 
 aufgabe = Zahlenspiel(1, 20)
 aufgabe.FuzzBuzzRätsel()
+
+
+
+sys.exit(app.exec())
+
