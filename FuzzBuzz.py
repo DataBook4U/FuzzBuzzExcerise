@@ -6,15 +6,15 @@ class Zahlenspiel:
         self.Endbereich = Endbereich
 
     def FuzzBuzzRätsel(self):
-        for i in range(self.Startbereich, self.Endbereich):
+        ergebnis = ""
+        for i in range(self.Startbereich, self.Endbereich + 1):
             if i % 3 == 0 and i % 5 == 0:
-                print("FuzzBuzz")
+                ergebnis += "FuzzBuzz\n"
             elif i % 3 == 0:
-                print("Fuzz")
+                ergebnis += "Fuzz\n"
             elif i % 5 == 0:
-                print("Buzz")
+                ergebnis += "Buzz\n"
             else:
-                print(i)
+                ergebnis += f"{i}\n"
+        return ergebnis
 
-aufgabe = Zahlenspiel(1, 20)
-aufgabe.FuzzBuzzRätsel()
